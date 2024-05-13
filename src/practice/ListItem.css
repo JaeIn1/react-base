@@ -1,0 +1,52 @@
+.list_item {
+  list-style-type: none;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete_btn {
+  position: absolute;
+  right: 10px;
+  background-color: inherit;
+  border: none;
+  font-size: 17px;
+}
+.delete_btn:hover {
+  cursor: pointer;
+}
+
+.update_btn {
+  position: absolute;
+  right: 35px;
+  background-color: inherit;
+  border: none;
+  font-size: 17px;
+}
+.update_btn:hover {
+  cursor: pointer;
+}
+
+.update_input {
+  width: 88%;
+  height: 40px;
+}
+
+.update_li {
+  width: 100%;
+  list-style-type: none;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list_text {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
