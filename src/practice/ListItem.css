@@ -3,8 +3,13 @@
   text-decoration: none;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: 1.5px solid rgb(107, 98, 255, 0.4); /* 색상 코드 수정 */
+  transition: border-bottom 0.2s ease-in-out; /* 트랜지션 추가 */
+}
+.list_item:hover {
+  border-bottom: 2px solid rgba(107, 98, 255, 0.87); /* 보다 진한 색상으로 수정 */
 }
 
 .delete_btn {
@@ -30,8 +35,13 @@
 }
 
 .update_input {
-  width: 88%;
+  width: 90%;
   height: 40px;
+  border: none;
+  text-align: center;
+}
+.update_input:focus {
+  outline: none;
 }
 
 .update_li {
@@ -45,7 +55,7 @@
 }
 
 .list_text {
-  width: 80%;
+  width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

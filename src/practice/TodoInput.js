@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import "./Todo.css";
 
 const TodoInput = (props) => {
   const onChangeInput = (e) => {
@@ -22,14 +23,13 @@ const TodoInput = (props) => {
   return (
     <input
       type="text"
-      placeholder="오늘 할 일을 적어주세요"
+      placeholder="Add Todo.."
       className="TodoInput"
       value={props.value}
       onChange={onChangeInput}
       onKeyDown={onKeyDownInput}
       style={{
         backgroundColor: props.selColor,
-        border: "1px solid rgba(0,0,0,0.2)",
       }}
     />
   );

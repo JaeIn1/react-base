@@ -1,3 +1,5 @@
+import SearchIcon from "@mui/icons-material/Search";
+
 const TodoSearchInput = (props) => {
   const onChangeSearchInput = (e) => {
     let inputValue = e.target.value;
@@ -9,7 +11,7 @@ const TodoSearchInput = (props) => {
           if (e[0].includes(inputValue)) {
             return [e[0], e[1]];
           }
-        })
+        }),
       );
     } else {
       props.setSearchCheck(false);
@@ -19,13 +21,16 @@ const TodoSearchInput = (props) => {
     console.log(props.list);
   };
   return (
-    <input
-      type="text"
-      placeholder="할 일을 검색해보세요"
-      className="TodoInput"
-      value={props.searchValue}
-      onChange={onChangeSearchInput}
-    />
+    <div className="search_div">
+      <input
+        type="text"
+        placeholder="Search note..."
+        className="TodoInput_search"
+        value={props.searchValue}
+        onChange={onChangeSearchInput}
+      />
+      <SearchIcon className="todo_search_icon" />
+    </div>
   );
 };
 

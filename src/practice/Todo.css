@@ -8,10 +8,33 @@
 .TodoInput {
   width: 100%;
   line-height: 1.5em;
-  border: 1px solid rgba(0, 0, 0, 0, 3);
+  border: 1px solid #6b62ff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 7px;
+}
+.TodoInput_search {
+  width: 100%;
+  line-height: 1.5em;
+  border: 1px solid #6b62ff;
   margin-bottom: 15px;
   margin-top: 10px;
   padding: 10px;
+  padding-left: 40px;
+  border-radius: 7px;
+}
+
+.search_div {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.todo_search_icon {
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  color: #6b62ff;
 }
 
 .color_div {
@@ -31,4 +54,11 @@
   max-height: 500px;
   overflow-y: scroll;
   padding: 0px;
+}
+
+.todo_input_dev {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
