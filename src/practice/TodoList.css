@@ -1,0 +1,27 @@
+.all_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+}
+.all_select_btn {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}
+.all_select_btn.curAll {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: #6b62ff;
+}
+
+.all_delete_btn {
+  color: gray;
+}

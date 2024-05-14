@@ -1,7 +1,7 @@
 import "./ListItem.css";
 import CreateIcon from "@mui/icons-material/Create";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CheckIcon from "@mui/icons-material/Check";
 
 const ListItem = (props) => {
@@ -37,8 +37,20 @@ const ListItem = (props) => {
     }
   };
 
-  const onClickDone = () => {
+  useEffect(() => {
+    setDone(props.allCheck);
+  }, [props.allCheck]);
+
+  const onClickDone = (e) => {
     setDone((prev) => !prev);
+    props.setCulCheck(false);
+    props.setAllCheck(false);
+    if (props.allCheck) {
+      let newArr = props.list.filter((e) => props.id !== e[2]);
+      props.setCheckList(newArr);
+    } else {
+      props.setCheckList([...new Set([...props.checkList, props.id])]);
+    }
   };
 
   return (
@@ -50,7 +62,7 @@ const ListItem = (props) => {
         position: "relative",
       }}
     >
-      {done ? (
+      {done === true ? (
         <CheckIcon onClick={onClickDone} className="done_icon" />
       ) : (
         <button className="done_btn" onClick={onClickDone}></button>
