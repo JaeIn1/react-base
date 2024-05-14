@@ -8,13 +8,11 @@ const TodoList = (props) => {
     <>
       <div className="color_div">
         {color.map((e, i) => (
-          <ColorPick
-            color={e}
-            key={i}
-            setSelColor={props.setSelColor}
-            setList={props.setList}
-          />
+          <ColorPick color={e} key={i} setSelColor={props.setSelColor} setList={props.setList} />
         ))}
+      </div>
+      <div>
+        <div></div>
       </div>
       <ul className="list_ul">
         {props.searchCheck
@@ -28,6 +26,7 @@ const TodoList = (props) => {
                 setList={props.setList}
                 searchValue={props.searchValue}
                 setvalue={props.setvalue}
+                TODO_KEY={props.TODO_KEY}
               />
             ))
           : props.list.map((e, i) => (
@@ -39,6 +38,7 @@ const TodoList = (props) => {
                 list={props.list}
                 setList={props.setList}
                 setvalue={props.setvalue}
+                TODO_KEY={props.TODO_KEY}
               />
             ))}
       </ul>

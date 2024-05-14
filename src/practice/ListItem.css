@@ -5,30 +5,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1.5px solid rgb(107, 98, 255, 0.4); /* 색상 코드 수정 */
-  transition: border-bottom 0.2s ease-in-out; /* 트랜지션 추가 */
-}
-.list_item:hover {
-  border-bottom: 2px solid rgba(107, 98, 255, 0.87); /* 보다 진한 색상으로 수정 */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: border 0.1s ease-in-out;
+  margin-bottom: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+  padding: 10px 30px;
+  padding-right: 10px;
+  margin-bottom: 10px;
 }
 
+.list_item:hover {
+  border: 2px solid rgba(107, 98, 255, 0.87); /* 보다 진한 색상으로 수정 */
+  cursor: pointer;
+}
+.todoList_setting {
+  display: flex;
+  align-items: center;
+}
 .delete_btn {
-  position: absolute;
-  right: 10px;
   background-color: inherit;
   border: none;
   font-size: 17px;
+  color: #6b62ff;
 }
 .delete_btn:hover {
   cursor: pointer;
 }
 
 .update_btn {
-  position: absolute;
-  right: 35px;
   background-color: inherit;
   border: none;
   font-size: 17px;
+  color: #6b62ff;
 }
 .update_btn:hover {
   cursor: pointer;
@@ -36,7 +45,6 @@
 
 .update_input {
   width: 90%;
-  height: 40px;
   border: none;
   text-align: center;
 }
@@ -59,4 +67,22 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.list_text.done {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: lightgray;
+  text-decoration: line-through;
+}
+.done_btn {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}
+.done_icon {
+  color: #6b62ff;
 }

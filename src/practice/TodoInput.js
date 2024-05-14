@@ -17,7 +17,7 @@ const TodoInput = (props) => {
       props.setList(result);
       props.setvalue("");
       props.setSelColor("white");
-      localStorage.setItem("myTodo", JSON.stringify(result));
+      localStorage.setItem(props.TODO_KEY, JSON.stringify(result));
     }
   };
   return (

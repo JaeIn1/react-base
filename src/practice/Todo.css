@@ -4,6 +4,12 @@
   padding-top: 140px;
   text-align: center;
 }
+.parent h1 {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6b62ff;
+}
 
 .TodoInput {
   width: 100%;

@@ -3,27 +3,16 @@ import TodoInput from "./TodoInput";
 import TodoSearchInput from "./TodoSearchInput";
 import TodoList from "./TodoList";
 import "./Todo.css";
-import TodoModal from "./TodoModal";
+const TODO_KEY = "myTodo";
 
 const Todo = () => {
   const [value, setvalue] = useState("");
-  const [list, setList] = useState(JSON.parse(localStorage.getItem("myTodo")) ?? []);
+  const [list, setList] = useState(JSON.parse(localStorage.getItem(TODO_KEY)) ?? []);
 
   const [searchList, setSearchList] = useState([]);
   const [selColor, setSelColor] = useState("white");
   const [searchValue, setSearchValue] = useState("");
   const [searchCheck, setSearchCheck] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // 모달 열기
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  // 모달 닫기
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <div className="parent">
@@ -35,6 +24,7 @@ const Todo = () => {
         selColor={selColor}
         setSelColor={setSelColor}
         setList={setList}
+        TODO_KEY={TODO_KEY}
       />
       <TodoSearchInput
         list={list}
@@ -45,6 +35,7 @@ const Todo = () => {
         searchCheck={searchCheck}
         setSearchCheck={setSearchCheck}
       />
+
       <TodoList
         list={list}
         setSelColor={setSelColor}
@@ -53,9 +44,8 @@ const Todo = () => {
         searchList={searchList}
         searchValue={searchValue}
         setvalue={setvalue}
+        TODO_KEY={TODO_KEY}
       />
-      {/* 모달 */}
-      <TodoModal isModalOpen={isModalOpen} closeModal={closeModal} />
     </div>
   );
 };
